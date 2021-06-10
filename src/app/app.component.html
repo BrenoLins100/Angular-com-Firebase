@@ -1,0 +1,65 @@
+<div class="form-container" *ngIf="!(AuthService.user | async)">
+
+
+
+  <h1 class="text-center">Autenticando login</h1>
+
+  <form>
+
+
+    <label for="email" class="form-label">Email</label>
+
+    <div class="input-box">
+      <input placeholder="Ex: fulano@gmail.com" class="form-control" type="text" name="email" [(ngModel)]="email">
+      <i class="fas fa-envelope"></i>
+    </div>
+
+
+    <label for="password" class="form-label">Senha</label>
+    <div class="input-box">
+      <input placeholder="Ex: 123456" class="form-control" type="password" name="password"[(ngModel)]="password">
+      <i class="fas fa-lock"></i>
+    </div>
+
+
+    <div class="btns mb-3">
+
+      <button class="btn btn-primary login-email" (click)="loginWithEmail()" >
+        <i class="far fa-envelope"></i>
+        Logar com Email
+        </button>
+
+      <button class="btn btn-primary login-google" (click)="loginWithGoogle()" >
+        <i class="fab fa-google"></i>
+        Logar com Google
+        </button>
+
+    </div>
+
+
+
+  </form>
+</div>
+
+<div *ngIf="AuthService.authError" style="color:red;">
+
+  {{AuthService.authError}}
+
+</div>
+
+
+<div class="form-container" *ngIf="AuthService.user | async">
+
+  Logado com como <b> {{(AuthService.user | async)?.email}}</b>
+
+  <br>
+  <button class="btn btn-danger mt-2" (click)="logout()" >Sair</button>
+
+  <div>
+
+    
+
+  </div>
+
+
+</div>

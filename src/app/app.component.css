@@ -1,0 +1,95 @@
+
+.input-box{
+  position: relative;
+}
+
+.input-box i{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 30px;
+  font-size: 18px;
+  color: #aaaaaa;
+  transition: all 500ms ease;
+}
+
+.form-container{
+  margin: 30px auto;
+  padding: 20px 30px;
+  max-width: 600px!important;
+}
+
+.form-label{
+  margin-top: 10px;
+  font-weight: 500;
+  color: #545454;
+}
+
+.form-control{
+  box-shadow: none;
+  caret-color: #545454;
+  border: 0;
+  background: #eee;
+  border-radius: 30px;
+  padding: 10px 0;
+  text-indent: 50px;
+  font-weight: 500;
+  color: #545454;
+   transition: all 500ms ease;
+}
+
+.form-control::placeholder{
+  color: #aaaaaa;
+}
+
+.form-control:focus{
+  text-indent: 13px;
+  transition: all 500ms ease;
+}
+
+.form-control:focus + i{
+  opacity: 0;
+  transition: all 500ms ease;
+  transform: rotateZ(180deg);
+}
+
+
+.btns{
+  flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns .btn{
+  margin-top: 10px;
+  flex: 1 0 100%;
+}
+
+.login-email,
+.login-google{
+  border: 0;
+  border-radius: 30px;
+  padding: 10px 0;
+  position: relative;
+  font-weight: 500;
+  box-shadow: none!important;
+}
+
+.login-email{
+  background: #ff6b6b;
+}
+
+
+.login-google{
+  background: #0984e3;
+}
+
+.login-email i,
+.login-google i{
+  font-size: 20px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 30px;
+}

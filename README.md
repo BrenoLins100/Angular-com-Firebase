@@ -1,7 +1,7 @@
-# Angular-com-Firebase
- Projeto em realizado com Angular TS e FireBase, que tem como objetivo criar uma aplicação que utilize o  controle de acesso e manipule dados, utilizando o  Cloud Firestore para manipulação de dados,  e Authentication para autenticação de usuários
+# Aula-angular-firebase
 
+## ⚡️Etapa 1:
 
-## 🔧Etapa 1: Evidenciar App com controle de acesso.
+⚡️Evidenciar app com controle de acesso usando o Firebase
 
-## 🔧Etapa2: Evidenciar manipulação de dados.
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/aula-angular-firebase)
