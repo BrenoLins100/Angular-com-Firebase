@@ -50,16 +50,21 @@
 
 <div class="form-container" *ngIf="AuthService.user | async">
 
-  Logado com como <b> {{(AuthService.user | async)?.email}}</b>
+  <div class="container container-logado">
+
+    Logado com como <b> {{(AuthService.user | async)?.email}}</b>
 
   <br>
+
   <button class="btn btn-danger mt-2" (click)="logout()" >Sair</button>
-
-  <div>
-
-    
 
   </div>
 
+  <div class="container links">
+    <a  [routerLink]="['']" class="link-primary">Home</a>
+    <a [routerLink]="['/firelist']" class="link-primary">Lista do firebase</a>
+  </div>
+  
+  <router-outlet></router-outlet>
 
 </div>

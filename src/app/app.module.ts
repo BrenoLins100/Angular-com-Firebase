@@ -9,12 +9,20 @@ import { AngularFireAuthModule} from '@angular/fire/auth';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AuthService } from './auth.service';
+import { FirelistComponent } from './firelist/firelist.component';
+import { RouterModule } from '@angular/router';
+import { IndexComponent } from './index/index.component';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   imports:      
   [ 
     BrowserModule, 
     FormsModule,
+    RouterModule.forRoot([
+      {path: '', component: IndexComponent},
+      {path: 'firelist', component: FirelistComponent}
+    ]),
 
     //configurando api
     AngularFireModule.initializeApp(
@@ -30,9 +38,10 @@ import { AuthService } from './auth.service';
     }
 
     ),
-    AngularFireAuthModule 
+    AngularFireAuthModule,
+    AngularFireDatabaseModule 
   ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent, FirelistComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]
 })
